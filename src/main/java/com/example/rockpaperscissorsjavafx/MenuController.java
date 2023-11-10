@@ -39,7 +39,6 @@ public class MenuController {
             GameController gameController = loader.getController();
             gameController.setMainController(mainController);
             mainController.setMenuScreen(pane);
-            gameController.startGame(playerName,maxScoreValue);
         } else {
             errorMessage.setText("Podaj Nazwę. min 3 znaki");
         }

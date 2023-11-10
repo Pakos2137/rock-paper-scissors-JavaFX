@@ -6,14 +6,13 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rockpaperscissorsjavafx.GameController">
    <children>
       <Button fx:id="backToMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Powrót Do Menu" />
       <Button fx:id="scoreReset" layoutX="494.0" layoutY="14.0" mnemonicParsing="false" text="Resetuj Wynik" />
       <ButtonBar layoutX="159.0" layoutY="286.0" prefHeight="40.0" prefWidth="221.0">
          <buttons>
-            <Button fx:id="stoneButton" mnemonicParsing="false" onAction="#stone" text="Kamień" />
+            <Button fx:id="stoneButton" mnemonicParsing="false" onAction="#rock" text="Kamień" />
             <Button fx:id="paperButton" mnemonicParsing="false" onAction="#paper" text="Papier" />
             <Button fx:id="scissorsButton" mnemonicParsing="false" onAction="#scissors" text="Nożyce" />
          </buttons>
@@ -23,7 +22,6 @@
             <Font size="34.0" />
          </font>
       </Label>
-      <Label layoutX="236.0" layoutY="173.0" />
       <Label layoutX="342.0" layoutY="128.0" text="Komputer:">
          <font>
             <Font size="25.0" />
@@ -32,6 +30,16 @@
       <Label fx:id="playerNameLabel" alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutY="128.0" prefHeight="36.0" prefWidth="265.0" textAlignment="RIGHT">
          <font>
             <Font size="25.0" />
+         </font>
+      </Label>
+      <Label fx:id="computerScoreLabel" layoutX="362.0" layoutY="175.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="playerScoreLabel" layoutX="198.0" layoutY="175.0">
+         <font>
+            <Font size="35.0" />
          </font>
       </Label>
    </children>
