@@ -6,10 +6,10 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.text.Font?>
 
-<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.rockpaperscissorsjavafx.GameController">
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.GameController">
    <children>
       <Button fx:id="backToMenuButton" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" onAction="#backToMenu" text="Powrót Do Menu" />
-      <Button fx:id="scoreReset" layoutX="494.0" layoutY="14.0" mnemonicParsing="false" text="Resetuj Wynik" />
+      <Button fx:id="scoreResetButton" layoutX="494.0" layoutY="14.0" mnemonicParsing="false" onAction="#scoreReset" text="Resetuj Wynik" />
       <ButtonBar layoutX="159.0" layoutY="286.0" prefHeight="40.0" prefWidth="221.0">
          <buttons>
             <Button fx:id="stoneButton" mnemonicParsing="false" onAction="#rock" text="Kamień" />
@@ -40,6 +40,16 @@
       <Label fx:id="playerScoreLabel" layoutX="198.0" layoutY="175.0">
          <font>
             <Font size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="playerMoveLabel" alignment="CENTER" layoutX="158.0" layoutY="241.0" prefHeight="30.0" prefWidth="81.0">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+      <Label fx:id="computerMoveLabel" alignment="CENTER" layoutX="359.0" layoutY="241.0" prefHeight="30.0" prefWidth="81.0">
+         <font>
+            <Font size="20.0" />
          </font>
       </Label>
    </children>

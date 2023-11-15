@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.controllers.GameEndController">
+   <children>
+      <Button fx:id="backToMenuButton" layoutX="211.0" layoutY="251.0" mnemonicParsing="false" onAction="#backToMenu" text="Powrót Do Menu" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Button fx:id="exitButton" layoutX="233.0" layoutY="330.0" mnemonicParsing="false" onAction="#exit" text="Zakończ Grę" textAlignment="CENTER">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Button>
+      <Label fx:id="winText" alignment="CENTER" contentDisplay="CENTER" layoutX="184.0" layoutY="58.0" prefHeight="51.0" prefWidth="233.0" textAlignment="CENTER">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+      <Label fx:id="score" alignment="CENTER" contentDisplay="CENTER" layoutX="183.0" layoutY="130.0" prefHeight="51.0" prefWidth="233.0">
+         <font>
+            <Font size="35.0" />
+         </font>
+      </Label>
+   </children>
+</Pane>

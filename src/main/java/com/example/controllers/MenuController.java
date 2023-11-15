@@ -1,5 +1,6 @@
-package com.example.rockpaperscissorsjavafx;
+package com.example.controllers;
 
+import com.example.rockpaperscissorsjavafx.GameProcessor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -26,8 +27,6 @@ public class MenuController {
 
             playerName = nameField.getText();
             maxScoreValue = (int)maxScore.getValue();
-            System.out.println(maxScoreValue);
-            System.out.println(playerName);
 
             FXMLLoader loader = new FXMLLoader(this.getClass().getResource("/fxml/GameScreen.fxml"));
             Pane pane = null;
@@ -36,23 +35,21 @@ public class MenuController {
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
+            GameProcessor gameProcessor = new GameProcessor(maxScoreValue);
             GameController gameController = loader.getController();
+
+            gameController.valuesSetter();
+            gameController.setGameProcessor(gameProcessor);
             gameController.setMainController(mainController);
+
             mainController.setMenuScreen(pane);
+
+            gameController.nameSetter(playerName);
+            gameProcessor.setMainController(mainController);
         } else {
             errorMessage.setText("Podaj Nazwę. min 3 znaki");
         }
     }
-    public String getPlayerName() {
-        return playerName;
-    }
-    public int getMaxScoreValue() {
-        return maxScoreValue;
-    }
-    public void setMaxScoreValue(int maxScoreValue) {
-        this.maxScoreValue = maxScoreValue;
-    }
-
     public void setMainController(MainController mainController) {
         this.mainController = mainController;
     }
